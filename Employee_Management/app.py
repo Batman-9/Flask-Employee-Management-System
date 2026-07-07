@@ -111,7 +111,6 @@ def edit(id):
         employee=employee
     )
 
-
 @app.route("/delete/<int:id>")
 def delete(id):
 
@@ -124,6 +123,75 @@ def delete(id):
 
     return redirect("/employees")
 
+#---- Delete with Error Handling ----
+@app.route("/employees/<int:id>", methods=["DELETE"])
+def delete_employee(id):
+
+    cursor.execute("SELECT * FROM employees WHERE id=%s",(id,))
+    employee = cursor.fetchone()
+
+    if employee is None:
+
+        return jsonify({
+            "error":"Employee Not Found"
+        }),404
+
+    cursor.execute(
+        "DELETE FROM employees WHERE id=%s",
+        (id,)
+    )
+
+    connection.commit()
+
+    return jsonify({
+        "message":"Employee Deleted Successfully"
+    }),200
+
+#---- Update with Error Handling ----
+@app.route("/employees/<int:id>", methods=["PUT"])
+def update_employee(id):
+
+    cursor.execute(
+        "SELECT * FROM employees WHERE id=%s",
+        (id,)
+    )
+
+    employee = cursor.fetchone()
+
+    if employee is None:
+
+        return jsonify({
+            "error":"Employee Not Found"
+        }),404
+
+    data = request.json
+
+    sql = """
+    UPDATE employees
+    SET
+    Name=%s,
+    email=%s,
+    department=%s,
+    salary=%s,
+    Salary_credit_Date=%s
+    WHERE id=%s
+    """
+
+    values=(
+        data["Name"],
+        data["email"],
+        data["department"],
+        data["salary"],
+        data["Salary_credit_Date"],
+        id
+    )
+
+    cursor.execute(sql,values)
+    connection.commit()
+
+    return jsonify({
+        "message":"Employee Updated Successfully"
+    }),200
 
 if __name__ == "__main__":
     app.run(debug=True)
