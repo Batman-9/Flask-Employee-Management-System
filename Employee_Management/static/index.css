@@ -1,0 +1,144 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef5ff, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 850px;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8eef7;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #002affea;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Horizontal Line */
+hr {
+    border: none;
+    height: 1px;
+    background: #dfe6ee;
+    margin: 25px 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Navigation Buttons */
+nav a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff91c6, #00c6fb);
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(202, 0, 84, 0.3);
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 136, 255, 0.659);
+}
+
+nav a:active {
+    transform: scale(0.96);
+}
+
+/* Welcome Section */
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #1f4e79;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Decorative Top Bar */
+.card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #ffae00, #ff0000);
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top: -40px;
+    left: -40px;
+    width: calc(100% + 80px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .card {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 220px;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+}

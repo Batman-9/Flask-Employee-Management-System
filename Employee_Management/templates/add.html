@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Add Employee</title>
+<link rel="stylesheet" href=./static/add.css>
+</head>
+
+<body>
+
+<div class="background-circle circle1"></div>
+<div class="background-circle circle2"></div>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>👤 Add Employee</h1>
+        <p>Create a new employee profile</p>
+
+        <form method="POST">
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter employee name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="input-box">
+                <label>Department</label>
+                <input type="text" name="department" placeholder="e.g. Human Resources">
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+                    <label>Salary</label>
+                    <input type="number" step="0.01" name="salary" placeholder="₹ 50,000">
+                </div>
+
+                <div class="input-box">
+                    <label>Salary Credit Date</label>
+                    <input type="date" name="salary_date">
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <a href="/employees" class="back-btn">← Back</a>
+
+                <button type="submit">
+                    ➕ Add Employee
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

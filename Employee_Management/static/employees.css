@@ -1,0 +1,154 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#cfcfcf;
+    color:#333;
+    padding:40px;
+}
+
+/* Page Heading */
+h1{
+    text-align:center;
+    color:#1f4e79;
+    font-size:2.2rem;
+    margin-bottom:25px;
+}
+
+/* Navigation */
+.navbar{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#00eaff,#0042e9);
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:500;
+    transition:.3s;
+    box-shadow:0 5px 12px rgba(79,172,254,.3);
+}
+
+.navbar a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(17, 0, 255, 0.518);
+}
+
+/* Table Container */
+.table-container{
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* Header */
+thead{
+    background:linear-gradient(135deg,#0088ff,#00c6fb);
+    color:white;
+}
+
+th{
+    padding:18px;
+    text-align:center;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+/* Cells */
+td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #edf2f7;
+}
+
+/* Hover */
+tbody tr{
+    transition:.25s;
+}
+
+tbody tr:hover{
+    background:#eef7ff;
+}
+
+/* Edit Button */
+.edit-btn{
+    text-decoration:none;
+    color:white;
+    background:#27ae60;
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:14px;
+    transition:.3s;
+    display:inline-block;
+}
+
+.edit-btn:hover{
+    background:#00ac48;
+    transform:scale(1.05);
+}
+
+/* Delete Button */
+.delete-btn{
+    text-decoration:none;
+    color:white;
+    background:#ff412c;
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:14px;
+    margin-left:8px;
+    transition:.3s;
+    display:inline-block;
+}
+
+.delete-btn:hover{
+    background:#ff1900;
+    transform:scale(1.05);
+}
+
+/* Alternate Row Color */
+tbody tr:nth-child(even){
+    background:#fafcff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+    body{
+        padding:20px;
+    }
+
+    .table-container{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:900px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+    }
+}

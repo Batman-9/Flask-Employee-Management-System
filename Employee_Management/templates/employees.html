@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employees</title>
+    <link rel="stylesheet" href="./static/employees.css">
+</head>
+
+<body>
+
+<h1>👨‍💼 Employee Directory</h1>
+
+<div class="navbar">
+    <a href="/">🏠 Home</a>
+    <a href="/add">➕ Add Employee</a>
+</div>
+
+<div class="table-container">
+<table>
+
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Salary</th>
+    <th>Salary Credit Date</th>
+    <th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+{% for emp in employees %}
+<tr>
+    <td>{{ emp[0] }}</td>
+    <td>{{ emp[1] }}</td>
+    <td>{{ emp[2] }}</td>
+    <td>{{ emp[3] }}</td>
+    <td>₹ {{ emp[4] }}</td>
+    <td>{{ emp[5] }}</td>
+    <td>
+        <a class="edit-btn" href="/edit/{{ emp[0] }}"> Edit</a>
+        <a class="delete-btn"
+           href="/delete/{{ emp[0] }}"
+           onclick="return confirm('Delete Employee?')">
+            Delete
+        </a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+
+</table>
+</div>
+
+</body>
+
+</html>
