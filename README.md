@@ -13,6 +13,7 @@ A simple Employee Management REST API built using **Python**, **Flask**, and **M
 - JSON-based API responses
 - MySQL database integration
 - RESTful API design
+- Error handling for invalid requests
 
 ---
 
@@ -26,6 +27,29 @@ A simple Employee Management REST API built using **Python**, **Flask**, and **M
 
 ---
 
+## 📂 Project Structure
+
+Employees_Management/
+│
+├── app.py
+├── README.md
+│
+├── static/
+│   ├── add.css
+│   ├── edit.css
+│   ├── employees.css
+│   ├── index.css
+│   └── style.css
+│
+├── templates/
+    ├── add.html
+    ├── edit.html
+    ├── employees.html
+    └── index.html
+    
+---
+
+
 ## 📖 Learning Outcomes
 
 Through this project, I learned:
@@ -38,6 +62,7 @@ Through this project, I learned:
 - SQL queries using Python
 - API testing with Postman
 - HTTP Status Codes
+- Error Handling
 
 ---
 
