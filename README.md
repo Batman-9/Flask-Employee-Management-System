@@ -13,7 +13,6 @@ A simple Employee Management REST API built using **Python**, **Flask**, and **M
 - JSON-based API responses
 - MySQL database integration
 - RESTful API design
-- Error handling for invalid requests
 
 ---
 
@@ -39,7 +38,6 @@ Through this project, I learned:
 - SQL queries using Python
 - API testing with Postman
 - HTTP Status Codes
-- Error Handling
 
 ---
 
